@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	p Testing stuffs
+	h3 Visitors so far : #{counter} 
+	//- h1 Hello Boulder!
+
+block otherContent
+	h2 BEST FOOD EVER
+	ul
+		for foodItem in foods
+			li=foodItem.name
+	form(action="/submit", method="POST")
+		input(name="food")
+		input(type="submit")
+
+
+	//- h2 Hello there, I'm cool too
+	//- form(action="/formSubmit", method="POST")
+	//- 	input(name="food")
+	//- 	input(type="submit")
